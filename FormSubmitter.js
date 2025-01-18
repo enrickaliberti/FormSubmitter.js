@@ -1,7 +1,6 @@
 //Enrick Aliberti
 (function(global) {
     const FormSubmitter = function(formId, options = {}) {
-        // Impostazioni di default
         this.formId = formId;
         this.options = Object.assign({
             urlFormat: null, 
@@ -42,7 +41,6 @@
                 form.method = method; 
                 form.submit();
             } else if (this.options.submitMode === "active") {
-                // Modalità AJAX
                 this.submitViaAjax(newAction, formData, method);
             } else {
                 console.log("Method not implemented");
